@@ -60,8 +60,8 @@
 
             @endif
 
-            <!-- Developer view to delete app -->
-        @if(Auth::check() && Auth::user()->role == 'developer')
+            <!-- Developer view to delete or edit app -->
+        @if(Auth::check() && Auth::user()->role == 'developer' && $app->developer_id == Auth::id())
         <form action="{{ route('dev.delete', $app->app_id) }}" method="POST">
             @METHOD('delete')
             @csrf
