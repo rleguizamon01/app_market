@@ -23,7 +23,6 @@ Route::prefix('me/apps')->group(function () {
 
 // Authenticated users
 Route::get('me/apps', [App\Http\Controllers\AuthAppsController::class, 'showAuthApps'])->middleware('auth')->name('auth.apps');
-//Route::get('me/apps/{category}', [App\Http\Controllers\AuthAppsController::class, 'showAuthCategoryApps'])->middleware('auth')->name('auth.category');
 
 // Clients only
 Route::prefix('me/wishlist')->group(function () {

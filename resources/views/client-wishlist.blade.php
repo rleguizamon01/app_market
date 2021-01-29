@@ -14,6 +14,7 @@
         </tr>
     </thead>
     <tbody>
+        <!-- Shows data from apps that client added to wishlist -->
         @foreach($clientApps as $clientApp)
             <tr>
                 <th scope="row"> {{ $clientApp->apps->name }} </th>
@@ -22,8 +23,11 @@
                 <td> 
                      <input type="hidden" name="_token" value="{{ csrf_token() }}" id="token">
                      
-                     <button class="btn btn-primary mr-3 " type="submit" id="buyButton" value="{{ $clientApp->apps->app_id }}">Buy</button>
-                     <button class="btn btn-danger mr-3 " type="submit" id="deleteApp" value="{{ $clientApp->apps->app_id }}">Delete</button>
+                    <!-- Buy app button -->
+                    <button class="btn btn-primary mr-3 " type="submit" id="buyButton" value="{{ $clientApp->apps->app_id }}">Buy</button>
+                    
+                    <!-- Delete from wishlist button -->
+                    <button class="btn btn-danger mr-3 " type="submit" id="deleteApp" value="{{ $clientApp->apps->app_id }}">Delete</button>
                 </td>
             </tr>
         @endforeach
@@ -31,7 +35,8 @@
     </table>
 </div> 
 
-    <script>
+<!-- AJAX requests to controller --> 
+<script>
     $('#buyButton').click(function(){
         var appid = $('#buyButton').val();
         var action = 'buy';

@@ -8,6 +8,8 @@
     <div class="mt-3 mb-3">
      <h1> {{ $app->name }} </h1>
     </div>
+
+    <!-- Dev changes price and/or photo from app -->
     <form action="{{ route('dev.update', $app->app_id)}}" method="POST" enctype="multipart/form-data">
         @csrf
         @METHOD('PUT')

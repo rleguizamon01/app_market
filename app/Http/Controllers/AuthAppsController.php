@@ -41,41 +41,6 @@ class AuthAppsController extends Controller
         }
     }
 
-  /*  public function showAuthCategoryApps($category){
-
-        // Client Category Apps
-        
-        $categoryCol = Categories::where('name',$category);
-        if(Auth::user()->role == 'client'){
-
-           $apps = ClientApps::with('user')->where('user_id', Auth::id())->where('has_bought', 1)->get();
-           dd($apps);
-
-           $totalapps = ClientApps::get()->where('user_id', Auth::id())->where('has_bought', 1);
-           // $apps = ClientApps::with('user')->with('apps')->where('user_id', Auth::id())->where('has_bought', 1)->paginate(10);
-            $categories = Categories::all();
-            $current_category = $category;
-            
-            return view('auth-apps', compact('totalapps', 'apps', 'categories', 'current_category'));
-        }
-
-        // Developer Category Apps
-        elseif(Auth::user()->role == 'developer'){
-
-            
-
-
-
-
-            $totalapps =  Apps::get()->where('developer_id', Auth::id());
-            $apps =  Apps::where('developer_id', Auth::id())->where('category', $category);
-            $categories = Categories::all();
-            $current_category = $category;
-
-            return view('auth-apps', compact('totalapps', 'apps', 'categories', 'current_category'));
-        }
-    }*/
-
     public function showAppDetails($id){
         $app = App\Models\Apps::findOrFail($id);
 

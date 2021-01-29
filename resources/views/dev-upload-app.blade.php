@@ -4,6 +4,7 @@
 
 @section('container')
     <div class="container">
+        <!-- Dev uploads app to database -->
         <form action="{{ route('dev.post') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group mt-3">
