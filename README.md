@@ -26,8 +26,9 @@ Get Composer: https://getcomposer.org/download/
 
 ## Clone repository
 
+```
 $ git clone https://github.com/JoseSulbaran/laravel-project.git
-
+```
 
 ## Access route
 
@@ -88,11 +89,11 @@ Important roles (middlewares): **guest**, **auth**, **client** and **developer**
 
 **Guest can access to:**
 
-- GET /apps
+- *GET* /apps
 
-- GET /apps/{app}
+- *GET* /apps/{app}
 
-- GET /apps/{category}
+- *GET* /apps/{category}
 
   
 
@@ -100,17 +101,17 @@ Important roles (middlewares): **guest**, **auth**, **client** and **developer**
 
 - Guest routes
 
-- GET me/apps
+- *GET* me/apps
 
-- GET me/apps/create
+- *GET* me/apps/create
 
-- POST me/apps
+- *POST* me/apps
 
-- GET me/apps/{app}/edit
+- *GET* me/apps/{app}/edit
 
-- PUT me/apps/{edit}
+- *PUT* me/apps/{edit}
 
-- DELETE me/apps/{app}
+- *DELETE* me/apps/{app}
 
   
 
@@ -118,13 +119,13 @@ Important roles (middlewares): **guest**, **auth**, **client** and **developer**
 
 - Guest routes
 
-- GET me/apps
+- *GET* me/apps
 
-- GET me/wishlist
+- *GET* me/wishlist
 
-- POST api/buy
+- *POST* api/buy
 
-- DELETE api/buy
+- *DELETE* api/buy
 
   
 
@@ -170,7 +171,7 @@ Consists of a relational database with four models (tables): **Apps**, **Categor
 
 | Id | name | email | password | role |
 | --- | --- | --- | --- | --- |
-| key bigint | varchar | varchar | fkey varchar | varchar |
+| key bigint | varchar | varchar | varchar | varchar |
 
   
 
