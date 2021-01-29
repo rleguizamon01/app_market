@@ -171,7 +171,7 @@ Consists of a relational database with four models (tables): **Apps**, **Categor
 
 | Id | name | email | password | role |
 | --- | --- | --- | --- | --- |
-| key bigint | varchar | varchar | fkey varchar | varchar |
+| key bigint | varchar | varchar | varchar | varchar |
 
   
 
