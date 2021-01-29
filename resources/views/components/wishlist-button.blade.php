@@ -1,0 +1,1 @@
+<button class="btn btn-primary" type="submit" id="addToWishList">Add to wishlist</button>
