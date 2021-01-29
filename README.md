@@ -26,8 +26,9 @@ Get Composer: https://getcomposer.org/download/
 
 ## Clone repository
 
+```
 $ git clone https://github.com/JoseSulbaran/laravel-project.git
-
+```
 
 ## Access route
 
